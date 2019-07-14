@@ -1,0 +1,39 @@
+{
+	"name": "d3-interpolate-curve",
+	"version": "0.0.1",
+	"description": "Interpolate from SVG curves",
+	"keywords": [
+		"d3",
+		"d3-module",
+		"interpolate",
+		"interpolation",
+		"curve"
+	],
+	"homepage": "https://github.com/jamesleesaunders/",
+	"license": "BSD-3-Clause",
+	"author": {
+		"name": "James Saunders"
+	},
+	"main": "dist/d3-interpolate-curve.js",
+	"unpkg": "dist/d3-interpolate-curve.min.js",
+	"jsdelivr": "dist/d3-interpolate-curve.min.js",
+	"module": "src/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jamesleesaunders/d3-interpolate-curve.git"
+	},
+	"scripts": {
+		"pretest": "rollup -c",
+		"test": "tape 'test/**/*-test.js' && eslint src"
+	},
+	"dependencies": {
+		"d3-shape": "1",
+		"d3-array": "2"
+	},
+	"devDependencies": {
+		"eslint": "5",
+		"rollup": "0.64",
+		"rollup-plugin-terser": "1",
+		"tape": "4"
+	}
+}

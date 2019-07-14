@@ -21,3 +21,7 @@ Returns interpolator based on a cubic Catmull–Rom spline.
 ### d3.interpolateMonotoneX(values)
 
 Returns interpolator based on MonotoneX spline.
+
+### Credits
+
+* Andreas Plesch - Hugh credit for goes to Andreas who came up with the original concept for this module.

@@ -1,4 +1,4 @@
-// https://github.com/jamesleesaunders/ v0.0.1 Copyright 2019 James Saunders
+// https://github.com/jamesleesaunders/ v0.0.2 Copyright 2019 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array'], factory) :
@@ -40,6 +40,7 @@ function svgPathInterpolator(path, epsilon, samples) {
       let iter = 0;
 
       while (Math.abs(delta) > epsilon && iter < samples) {
+        if (iter > samples) return false;
         iter++;
 
         if (reverse * delta < 0) {
@@ -50,9 +51,7 @@ function svgPathInterpolator(path, epsilon, samples) {
           l = (mn + l) / 2;
         }
         nextDelta = svgpath.getPointAtLength(l).x - targetX;
-        if (Math.abs(Math.abs(delta) - Math.abs(nextDelta)) < epsilon) {
-          break;
-        }
+
         delta = nextDelta;
       }
 

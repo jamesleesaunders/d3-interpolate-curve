@@ -1,6 +1,6 @@
 {
 	"name": "d3-interpolate-curve",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"description": "Interpolate Curves",
 	"keywords": [
 		"d3",

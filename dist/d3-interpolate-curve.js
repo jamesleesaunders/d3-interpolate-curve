@@ -1,4 +1,4 @@
-// https://github.com/jamesleesaunders/ v0.0.2 Copyright 2019 James Saunders
+// https://github.com/jamesleesaunders/ v1.0.0 Copyright 2019 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array'], factory) :
@@ -15,10 +15,10 @@ function svgPathInterpolator(path, epsilon, samples) {
   // Create detached SVG path
   path = path || "M0,0L1,1";
 
-  const area = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  area.innerHTML = `<path></path>`;
-  const svgpath = area.querySelector('path');
-  svgpath.setAttribute('d', path);
+  const area = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  area.innerHTML = "<path></path>";
+  const svgpath = area.querySelector("path");
+  svgpath.setAttribute("d", path);
 
   // Calculate lengths and max points
   const totalLength = svgpath.getTotalLength();

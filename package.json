@@ -27,8 +27,9 @@
 		"test": "tape 'test/**/*-test.js' && eslint src"
 	},
 	"dependencies": {
+		"d3-array": "2",
 		"d3-shape": "1",
-		"d3-array": "2"
+		"jsdom": "^15.1.1"
 	},
 	"devDependencies": {
 		"eslint": "5",

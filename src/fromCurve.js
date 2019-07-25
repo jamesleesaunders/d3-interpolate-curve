@@ -1,12 +1,29 @@
 import { line as shapeLine } from "d3-shape";
 import { range as arrayRange } from "d3-array";
 
-function curvePolator(points, curve, epsilon, samples) {
+/**
+ * Curve Polator
+ *
+ * @param points
+ * @param curve
+ * @param epsilon
+ * @param samples
+ * @returns {Function}
+ */
+function curvePolator(points, curve, epsilon, samples) { // eslint-disable-line max-params
   const path = shapeLine().curve(curve)(points);
 
   return svgPathInterpolator(path, epsilon, samples);
 }
 
+/**
+ * SVG Psth Interpolator
+ *
+ * @param path
+ * @param epsilon
+ * @param samples
+ * @returns {Function}
+ */
 function svgPathInterpolator(path, epsilon, samples) {
   // Create detached SVG path
   path = path || "M0,0L1,1";
@@ -26,8 +43,10 @@ function svgPathInterpolator(path, epsilon, samples) {
 
   // Return function
   return function(x) {
-    const targetX = x === 0 ? 0 : x || minPoint.x; // Check for 0 and null/undefined
-    if (targetX < range[0].x) return range[0];     // Clamp
+    // Check for 0 and null/undefined
+    const targetX = x === 0 ? 0 : x || minPoint.x;
+    // Clamp
+    if (targetX < range[0].x) return range[0];
     if (targetX > range[1].x) return range[1];
 
     function estimateLength(l, mn, mx) {
@@ -60,7 +79,16 @@ function svgPathInterpolator(path, epsilon, samples) {
   }
 }
 
-export default function(values, curve, epsilon = 0.00001, samples = 100) {
+/**
+ * Interpolate From Curve
+ *
+ * @param values
+ * @param curve
+ * @param epsilon
+ * @param samples
+ * @returns {Function}
+ */
+export default function(values, curve, epsilon = 0.00001, samples = 100) { // eslint-disable-line max-params
   const length = values.length;
   const xrange = arrayRange(length).map(function(d, i) { return i * (1 / (length - 1)); });
   const points = values.map((v, i) => [xrange[i], v]);

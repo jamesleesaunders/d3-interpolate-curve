@@ -1,5 +1,5 @@
 import {terser} from "rollup-plugin-terser";
-import * as meta from "./package.json";
+import * as meta from "../package.json";
 
 const config = {
   input: "src/index.js",

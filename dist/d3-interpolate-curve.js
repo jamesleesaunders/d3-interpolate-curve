@@ -1,4 +1,4 @@
-// https://github.com/jamesleesaunders/ v1.0.0 Copyright 2019 James Saunders
+// https://github.com/jamesleesaunders/ v1.0.1 Copyright 2019 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array'], factory) :
@@ -14,7 +14,7 @@ typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-
  * @param samples
  * @returns {Function}
  */
-function curvePolator(points, curve, epsilon, samples) {
+function curvePolator(points, curve, epsilon, samples) { // eslint-disable-line max-params
   const path = d3Shape.line().curve(curve)(points);
 
   return svgPathInterpolator(path, epsilon, samples);
@@ -92,7 +92,7 @@ function svgPathInterpolator(path, epsilon, samples) {
  * @param samples
  * @returns {Function}
  */
-function fromCurve(values, curve, epsilon = 0.00001, samples = 100) {
+function fromCurve(values, curve, epsilon = 0.00001, samples = 100) { // eslint-disable-line max-params
   const length = values.length;
   const xrange = d3Array.range(length).map(function(d, i) { return i * (1 / (length - 1)); });
   const points = values.map((v, i) => [xrange[i], v]);

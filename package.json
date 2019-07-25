@@ -1,6 +1,6 @@
 {
 	"name": "d3-interpolate-curve",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Interpolate Curves",
 	"keywords": [
 		"d3",
@@ -24,7 +24,7 @@
 	},
 	"scripts": {
 		"pretest": "rollup -c config/rollup.config.js",
-		"test": "node 'test/test.js' && eslint -c 'config/.eslintrc.json' src"
+		"test": "node 'test/browserify-test.js' && eslint -c 'config/.eslintrc.json' src"
 	},
 	"dependencies": {
 		"browserify": "^16.3.0",

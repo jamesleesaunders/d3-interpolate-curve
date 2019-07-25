@@ -10,7 +10,7 @@ import { range as arrayRange } from "d3-array";
  * @param samples
  * @returns {Function}
  */
-function curvePolator(points, curve, epsilon, samples) {
+function curvePolator(points, curve, epsilon, samples) { // eslint-disable-line max-params
   const path = shapeLine().curve(curve)(points);
 
   return svgPathInterpolator(path, epsilon, samples);
@@ -88,7 +88,7 @@ function svgPathInterpolator(path, epsilon, samples) {
  * @param samples
  * @returns {Function}
  */
-export default function(values, curve, epsilon = 0.00001, samples = 100) {
+export default function(values, curve, epsilon = 0.00001, samples = 100) { // eslint-disable-line max-params
   const length = values.length;
   const xrange = arrayRange(length).map(function(d, i) { return i * (1 / (length - 1)); });
   const points = values.map((v, i) => [xrange[i], v]);

@@ -1,0 +1,9 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:concat-stream:20160901':
+    - tape-run > browser-run > xhr-write-stream > concat-stream:
+        reason: None given
+        expires: '2019-08-29T19:51:47.412Z'
+patch: {}

@@ -2,6 +2,14 @@
 
 This module provides a select of methods for generating number value interpolators from D3 curve functions.
 
+D3 has [d3-interpolate](https://github.com/d3/d3-interpolate) functions, for example \`d3.interpolateBasis()\`, for interpolating a series in numbers into a curve using the Basis interpolation algorithm.
+
+D3 also has [d3-curve](https://github.com/d3/d3-shape#curves) functions, like \`d3.curveCardinal()\` and \`d3.curveMonotoneX()\`, which can be used to quickly generate SVG curve paths.
+
+However, interpolate functions like \`d3.interpolateCardinal()\` and \`d3.interpolateMonotoneX()\` do not currently exist in D3, this limits us to to only be able to generate Cardinal and MonotoneX curves for SVG and not for things like X3D.
+
+The [d3-interpolate-curve](https://github.com/jamesleesaunders/d3-interpolate-curve) plugin has been written to fill this gap to provide missing interpolation functions like \`d3.interpolateCardinal()\` and \`d3.interpolateMonotoneX()\` as well as \`d3.interpolateFromCurve()\`.
+
 ## Installing
 
 If you use NPM, `npm install d3-interpolate-curve`. 

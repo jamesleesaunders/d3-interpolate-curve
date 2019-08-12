@@ -17,7 +17,7 @@ function curvePolator(points, curve, epsilon, samples) { // eslint-disable-line 
 }
 
 /**
- * SVG Psth Interpolator
+ * SVG Path Interpolator
  *
  * @param path
  * @param epsilon
@@ -83,15 +83,20 @@ function svgPathInterpolator(path, epsilon, samples) {
  * Interpolate From Curve
  *
  * @param values
- * @param curve
+ * @param curveFunction
  * @param epsilon
  * @param samples
  * @returns {Function}
  */
-export default function(values, curve, epsilon = 0.00001, samples = 100) { // eslint-disable-line max-params
+export default function(values, curveFunction, epsilon = 0.00001, samples = 100) { // eslint-disable-line max-params
   const length = values.length;
   const xrange = arrayRange(length).map(function(d, i) { return i * (1 / (length - 1)); });
   const points = values.map((v, i) => [xrange[i], v]);
 
-  return curvePolator(points, curve, epsilon, samples);
+  // If curveFunction is Basis then reach straight for D3's native 'interpolateBasis' function (it's faster!)
+  if (curveFunction === d3.curveBasis) {
+    return d3.interpolateBasis(values);
+  } else {
+    return curvePolator(points, curveFunction, epsilon, samples);
+  }
 }

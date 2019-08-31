@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"browserify": "^16.3.0",
-		"d3-array": "2",
+		"d3-array": "2.3.1",
 		"d3-interpolate": "1",
 		"d3-shape": "1",
 		"jsdom": "^15.1.1",

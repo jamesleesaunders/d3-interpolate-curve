@@ -1,4 +1,4 @@
-// https://github.com/jamesleesaunders/ v1.0.2 Copyright 2019 James Saunders
+// https://github.com/jamesleesaunders/ v1.0.2 Copyright 2020 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array'), require('d3-interpolate')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array', 'd3-interpolate'], factory) :

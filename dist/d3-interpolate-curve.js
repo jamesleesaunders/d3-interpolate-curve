@@ -2,8 +2,8 @@
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array'), require('d3-interpolate')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array', 'd3-interpolate'], factory) :
-(factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3));
-}(this, (function (exports,d3Shape,d3Array,d3Interpolate) { 'use strict';
+(global = global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3, global.d3));
+}(this, function (exports, d3Shape, d3Array, d3Interpolate) { 'use strict';
 
 /**
  * Curve Polator
@@ -142,4 +142,4 @@ exports.interpolateMonotoneX = monotoneX;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

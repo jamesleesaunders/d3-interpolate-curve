@@ -1,9 +1,19 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:concat-stream:20160901':
     - tape-run > browser-run > xhr-write-stream > concat-stream:
         reason: None given
         expires: '2019-08-29T19:51:47.412Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - eslint > lodash:
+        patched: '2020-05-01T08:30:10.147Z'
+    - eslint > inquirer > lodash:
+        patched: '2020-05-01T08:30:10.147Z'
+    - eslint > table > lodash:
+        patched: '2020-05-01T08:30:10.147Z'
+    - jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2020-05-01T08:30:10.147Z'

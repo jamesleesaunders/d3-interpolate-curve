@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.19.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:concat-stream:20160901':
@@ -17,3 +17,5 @@ patch:
         patched: '2020-05-01T08:30:10.147Z'
     - jsdom > request-promise-native > request-promise-core > lodash:
         patched: '2020-05-01T08:30:10.147Z'
+    - tape-run > browser-run > electron-stream > electron > @electron/get > global-tunnel-ng > lodash:
+        patched: '2020-08-04T08:48:35.262Z'

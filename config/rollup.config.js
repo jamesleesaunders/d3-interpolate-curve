@@ -1,4 +1,4 @@
-import {terser} from "rollup-plugin-terser";
+import {terser} from "rollup-plugin-minification";
 import * as meta from "../package.json";
 
 const config = {

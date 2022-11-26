@@ -1,4 +1,4 @@
-Copyright 2019 James Saunders
+Copyright 2022 James Saunders
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

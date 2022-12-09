@@ -1,9 +1,9 @@
-// https://github.com/jamesleesaunders/ v1.0.2 Copyright 2022 James Saunders
+// https://github.com/jamesleesaunders/ v1.0.4 Copyright 2022 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array'), require('d3-interpolate')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array', 'd3-interpolate'], factory) :
-(global = global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3, global.d3));
-}(this, function (exports, d3Shape, d3Array, d3Interpolate) { 'use strict';
+(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3, global.d3));
+})(this, (function (exports, d3Shape, d3Array, d3Interpolate) { 'use strict';
 
 /**
  * Curve Polator
@@ -135,9 +135,9 @@ function monotoneX(values) {
   return fromCurve(values, d3Shape.curveMonotoneX)
 }
 
-exports.interpolateFromCurve = fromCurve;
 exports.interpolateCardinal = cardinal;
 exports.interpolateCatmullRom = catmullRom;
+exports.interpolateFromCurve = fromCurve;
 exports.interpolateMonotoneX = monotoneX;
 
 Object.defineProperty(exports, '__esModule', { value: true });

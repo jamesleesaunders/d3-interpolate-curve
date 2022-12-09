@@ -1,6 +1,7 @@
 {
   "name": "d3-interpolate-curve",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "type": "module",
   "description": "Interpolate Curves",
   "keywords": [
     "d3",
@@ -23,25 +24,21 @@
     "url": "https://github.com/jamesleesaunders/d3-interpolate-curve.git"
   },
   "scripts": {
-    "pretest": "rollup -c config/rollup.config.js",
-    "test": "node 'test/browserify-test.js' && eslint -c 'config/.eslintrc.json' src",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "build": "rollup -c config/rollup.config.js",
+    "test": "tape 'test/*Test.js' | tap-spec",
+    "lint": "eslint -c 'config/.eslintrc.json' src"
   },
   "dependencies": {
-    "browserify": "^16.5.2",
     "d3-array": "^2.5.0",
     "d3-interpolate": "^3.0.1",
-    "d3-shape": "^1.3.7",
-    "jsdom": "^20.0.3",
-    "snyk": "^1.369.2",
-    "tape-run": "^10.0.0"
+    "d3-shape": "^1.3.7"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "rollup": "^0.68.2",
+    "rollup": "^2.53.2",
     "rollup-plugin-minification": "^0.2.0",
-    "tape": "^4.13.3"
-  },
-  "snyk": true
+    "svgdom": "^0.1.10",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.6.1"
+  }
 }

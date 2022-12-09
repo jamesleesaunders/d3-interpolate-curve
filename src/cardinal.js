@@ -1,4 +1,4 @@
-import { default as fromCurve } from "./fromCurve";
+import { default as fromCurve } from "./fromCurve.js";
 import { curveCardinal } from "d3-shape";
 
 /**

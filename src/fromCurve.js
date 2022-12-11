@@ -5,10 +5,10 @@ import { interpolateBasis } from "d3-interpolate";
 /**
  * Curve Polator
  *
- * @param points
- * @param curveFunction
- * @param epsilon
- * @param samples
+ * @param {array} points
+ * @param {function} curveFunction
+ * @param {number} epsilon
+ * @param {number} samples
  * @returns {Function}
  */
 function curvePolator(points, curveFunction, epsilon, samples) { // eslint-disable-line max-params

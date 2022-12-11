@@ -59,6 +59,11 @@ Returns interpolator based on MonotoneX spline.
 var interpolate = d3.interpolateMonotoneX([1,2,7,2]);
 ```
 
+## Options
+
+- samples - Number of samples.
+- epsilon - Coordinate precision.
+
 ## Credits
 
 * Andreas Plesch - hugh credit for goes to Andreas who came up with the original concept for this module.

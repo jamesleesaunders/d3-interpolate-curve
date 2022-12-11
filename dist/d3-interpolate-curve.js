@@ -1,4 +1,4 @@
-// https://github.com/jamesleesaunders/ v1.0.4 Copyright 2022 James Saunders
+// https://github.com/jamesleesaunders/ v1.0.5 Copyright 2022 James Saunders
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-shape'), require('d3-array'), require('d3-interpolate')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-array', 'd3-interpolate'], factory) :
@@ -8,10 +8,10 @@ typeof define === 'function' && define.amd ? define(['exports', 'd3-shape', 'd3-
 /**
  * Curve Polator
  *
- * @param points
- * @param curveFunction
- * @param epsilon
- * @param samples
+ * @param {array} points
+ * @param {function} curveFunction
+ * @param {number} epsilon
+ * @param {number} samples
  * @returns {Function}
  */
 function curvePolator(points, curveFunction, epsilon, samples) { // eslint-disable-line max-params
@@ -108,31 +108,37 @@ function fromCurve(values, curveFunction, epsilon = 0.00001, samples = 100) { //
 /**
  * Interpolate Cardinal
  *
- * @param values
+ * @param {array} points
+ * @param {number} epsilon
+ * @param {number} samples
  * @returns {Function}
  */
-function cardinal(values) {
-  return fromCurve(values, d3Shape.curveCardinal)
+function cardinal(points, epsilon = 0.00001, samples = 100) {
+  return fromCurve(points, d3Shape.curveCardinal, epsilon, samples)
 }
 
 /**
  * Interpolate Catmull-Rom
  *
- * @param values
+ * @param {array} points
+ * @param {number} epsilon
+ * @param {number} samples
  * @returns {Function}
  */
-function catmullRom(values) {
-  return fromCurve(values, d3Shape.curveCatmullRom)
+function catmullRom(points, epsilon = 0.00001, samples = 100) {
+  return fromCurve(points, d3Shape.curveCatmullRom, epsilon, samples)
 }
 
 /**
  * Interpolate MonotoneX
  *
- * @param values
+ * @param {array} points
+ * @param {number} epsilon
+ * @param {number} samples
  * @returns {Function}
  */
-function monotoneX(values) {
-  return fromCurve(values, d3Shape.curveMonotoneX)
+function monotoneX(points, epsilon = 0.00001, samples = 100) {
+  return fromCurve(points, d3Shape.curveMonotoneX, epsilon, samples)
 }
 
 exports.interpolateCardinal = cardinal;

@@ -35,7 +35,7 @@
   "dependencies": {
     "d3-array": "^3.2.1",
     "d3-interpolate": "^3.0.1",
-    "d3-shape": "^3.1.0"
+    "d3-shape": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

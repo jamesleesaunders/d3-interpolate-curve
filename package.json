@@ -41,7 +41,7 @@
     "eslint": "^6.8.0",
     "rollup": "^2.53.2",
     "rollup-plugin-minification": "^0.2.0",
-    "svgdom": "^0.1.10",
+    "svgdom": "^0.1.11",
     "tap-spec": "^5.0.0",
     "tape": "^5.6.1"
   }

@@ -38,7 +38,7 @@
     "d3-shape": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "rollup": "^2.53.2",
     "rollup-plugin-minification": "^0.2.0",
     "svgdom": "^0.1.11",

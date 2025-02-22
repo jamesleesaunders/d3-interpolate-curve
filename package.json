@@ -33,16 +33,17 @@
     "lint": "eslint -c 'config/.eslintrc.json' src"
   },
   "dependencies": {
-    "d3-array": "^3.2.2",
+    "d3-array": "^3.2.4",
     "d3-interpolate": "^3.0.1",
     "d3-shape": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "rollup": "^2.53.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "eslint": "^9.21.0",
+    "rollup": "^4.34.8",
     "rollup-plugin-minification": "^0.2.0",
-    "svgdom": "^0.1.11",
+    "svgdom": "^0.1.20",
     "tap-spec": "^5.0.0",
-    "tape": "^5.6.3"
+    "tape": "^5.9.0"
   }
 }
